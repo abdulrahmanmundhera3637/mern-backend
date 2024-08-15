@@ -9,10 +9,11 @@ require("dotenv").config();
 const app = express();
 // Middleware
 app.use(cors({
-  origin: ["https://mern-frontend-phi-mauve.vercel.app/"],
+  origin: ["https://mern-frontend-phi-mauve.vercel.app"], // Remove trailing slash
   methods : ["GET","POST","PUT","DELETE"],
   credentials: true
 }));
+
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
