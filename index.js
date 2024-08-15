@@ -9,7 +9,7 @@ require("dotenv").config();
 const app = express();
 // Middleware
 app.use(cors({
-  origin: ["https://mern-frontend-phi-mauve.vercel.app"], // Remove trailing slash
+  origin: ["https://mern-frontend-phi-mauve.vercel.app"],
   methods : ["GET","POST","PUT","DELETE"],
   credentials: true
 }));
